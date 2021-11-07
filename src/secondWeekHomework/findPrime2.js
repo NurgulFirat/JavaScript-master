@@ -10,12 +10,9 @@ function findPrime2(){
                 break;
             }           
         }
-        if (control == 1) {
-          
-        }
-        else{
+        if (control != 1) {
             console.log(i + " is prime.")
-        }        
+        }      
     }
 }
 findPrime2()

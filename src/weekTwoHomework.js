@@ -1,14 +1,20 @@
-function findPrime(...numbers){
-    let control = false
-    for (let i = 0; i < numbers.length; i++){
-        if (numbers[i] % i == 0) {  
-            console.log(numbers[i] + " asaldır.")           
-        } else {
-            console.log(numbers[i] + " asal değildir.")
+//1- JavaScript ile istediğiniz kadar sayı parametre gönderebileceğiniz bir fonksiyon yazınız. Bu fonksiyona gönderdiğiniz her sayı için çıktı olarak asal olup olmadığını yazınız. (Araştırma konusu : şart blokları : if )
+
+function findPrime(...numbers) {
+    for (let i = 0; i < numbers.length; i++) {
+        let sayac = 0;
+        for (let j = 1; j <= numbers[i]; j++) {
+            if (numbers[i] % j == 0){
+                sayac++
+            }
+        }
+        if(sayac == 2){
+            console.log(numbers[i] + " is prime.");
+        }else {
+            console.log(numbers[i] + " is not prime.");
         }
     }
+    
 }
 
-//findPrime(5,15,23,45,56)
-//findPrime(3,10,23,2,41,43,2)
-findPrime(3,5,2)
+findPrime(5,13,24,2,28);

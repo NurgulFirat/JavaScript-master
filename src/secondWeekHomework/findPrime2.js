@@ -1,4 +1,5 @@
 //4- 1000'e kadarki tüm asal sayıları listeleyen programı yazınız.
+
 function findPrime2(){
  
     for (let number = 2; number <= 1000; number++) {

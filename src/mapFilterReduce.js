@@ -22,7 +22,6 @@ console.log(total)
 
 //Her bir product için filtreleme yapar.
 let quantityOver2 =  cart.filter(product=>product.quantity > 2)
-
 console.log(quantityOver2)
 
 

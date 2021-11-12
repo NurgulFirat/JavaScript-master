@@ -6,3 +6,38 @@ let cart = [
     {id:5, productName:"Kitap", quantity:3, unitPrice:30},
     {id:6, productName:"Pot", quantity:5, unitPrice:150},
 ]
+
+//ekrana gösteriyor. map: array'in içini tek tek dolaşmaya yarıyor.
+cart.map(product=>console.log(product.productName))
+
+console.log("<ul>")
+cart.map(product=>{
+    console.log("<li>" + product.productName + " : " + product.unitPrice * product.quantity + "</li>")
+})
+console.log("</ul>")
+
+//acc: toplam için ilk değer olarak alındı. reduce: toplamı alıyor.
+let total = cart.reduce((acc,product)=>acc + product.unitPrice * product.quantity, 0)
+console.log(total)
+
+//Her bir product için filtreleme yapar.
+let quantityOver2 =  cart.filter(product=>product.quantity > 2)
+
+console.log(quantityOver2)
+
+
+
+function addToCart(sepet){
+    sepet.push({id:7, productName:"Ruhsat", quantity:1, unitPrice:20})
+}
+
+addToCart(cart)
+console.log(cart)
+
+let sayi = 10
+function sayiTopla(number){
+    number += 1
+}
+
+sayiTopla(sayi)
+console.log(sayi)
